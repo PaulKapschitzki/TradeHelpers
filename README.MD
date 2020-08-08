@@ -1,0 +1,1 @@
+This will be a desktop electron app to create some Helper Tools for my trading like Pre-Trade-Checklists, Positions Size Calculator etc.
