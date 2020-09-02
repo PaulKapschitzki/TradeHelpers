@@ -1,0 +1,23 @@
+{
+  "name": "tradehelpers",
+  "version": "1.0.0",
+  "description": "Helper Tools for Trading",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulKapschitzki/TradeHelpers.git"
+  },
+  "author": "PaulKapschitzki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PaulKapschitzki/TradeHelpers/issues"
+  },
+  "homepage": "https://github.com/PaulKapschitzki/TradeHelpers#readme",
+  "devDependencies": {
+    "electron": "^10.1.1"
+  }
+}
