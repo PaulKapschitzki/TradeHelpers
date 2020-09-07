@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>>Pre-Trade-Checklist</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <form>
+        <h2>3BP / 4BP</h2>
+
+        <!-- Checklist -->
+        <div class="container">
+            <div class="col">
+                <div class="row">
+                    <label class="col-8">Is the 1st or 2nd Bar of a none extended move?</label>
+                    <input class="col-4" type="checkbox" id="ignitingBar" />
+                </div>
+                <div class="row">
+                    <label class="col-8">Is it a Wide Range Igniting Bar?</label>
+                    <input class="col-4" type="checkbox" id="wideRangeBar" />
+                </div>
+                <div class="row">
+                    <label class="col-8">Is Bar #2 (or #3) an Inside Resting Bar?</label>
+                    <input class="col-4" type="checkbox" id="insideRestingBar" />
+                </div>
+                <div class="row">
+                    <label class="col-8">Has the Igniting Bar increased Volume?</label>
+                    <input class="col-4" type="checkbox" id="increasedVolume" />
+                </div>
+                <div class="row">
+                    <label class="col-8">Do the Bars have relatively equal highs?</label>
+                    <input class="col-4" type="checkbox" id="equalHighs" />
+                </div>
+                <div class="row">
+                    <label class="col-8">Is there a Gap prior to the Igniting Bar?</label>
+                    <input class="col-4" type="checkbox" id="gap" />
+                </div>
+                <div>What kind of Gap is it?</div>
+                <div class="row">
+                    <div class="col-6"></div>
+                    <label class="col-2" for="level1">Level 1</label>
+                    <input class="col-4" type="radio" id="level1" name="gapLevel" value="level1">
+                    <div class="col-6"></div>
+                    <label class="col-2" for="level2">Level 2</label>
+                    <input class="col-4" type="radio" id="level2" name="gapLevel" value="level2">
+                    <div class="col-6"></div>
+                    <label class="col-2" for="level3">Level 3</label>
+                    <input class="col-4" type="radio" id="level3" name="gapLevel" value="level3">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div>
+                <!-- Buttons -->
+                <div class="row">
+                    <button id="checkBtn" type="button" class="btn btn-primary" data-toggle="collapse" href="#resultText" role="button" aria-expanded="false" aria-controls="resultText">Check</button>
+                </div>
+                <!-- Result + Rating of Setup -->
+                <div id="result">
+                </div>
+                <div id="resultText"></div>
+                <div id="rating">
+                    Rating: 
+                    <div id="ratingText"></div>
+                </div>
+            </div>
+        </div>
+        
+    </form>
+  </body>
+
+    <script defer> // defer makes sure, that the script is loaded after the html
+        require("./render.js");
+    </script> 
+</html>
