@@ -4,7 +4,9 @@ const resetBtn = document.getElementById("resetBtn");
 const resultText = document.getElementById("resultText");
 const result = document.getElementsByName("result");
 const form_34BP = document.getElementById("form_34BP");
-const ratingText = document.getElementById("ratingText"); 
+const ratingText = document.getElementById("ratingText");
+const chkBxIsGap = document.getElementById("isGap");
+const gapLevelGroup = document.getElementsByName("gapLevelGroup");
 let rating = 0;
 
 // Check Form inputs
@@ -19,6 +21,31 @@ resetBtn.onclick = () => {
     ratingText.innerHTML = "";
     rating = 0;
 }
+
+// // Check value of isGap checkbox
+// chkBxIsGap.onclick = () => {
+//     if ( this.checked ) {
+//         gapLevelGroup.show();
+//     } else {
+//         gapLevelGroup.hide();
+//     }
+// }
+
+/**
+ * @description Shows or Hides HTML elements according to value of a the "isGap" checkbox
+ */
+const showHideGapLevel = (chkBxIsGap) => {
+    if (chkBxIsGap.checked == true) {
+        gapLevelGroup.fadeIn();
+    } else {
+        gapLevelGroup.fadeOut();
+    }
+};
+
+// Hide and Show Gap Level elements with checking the "Is there a Gap" Checkbox
+// chkBxIsGap.onChange = (chkBIsGap) => {
+    
+// }
 
 /**
  * @description Checks the results of the checklists and checks if criteria for a trade setup are met.
@@ -114,4 +141,4 @@ const calcRating = (results) => {
  */
 const testCheckbox = (ele) => {
     return ele.checked == true ? true : false;
-}
+};
