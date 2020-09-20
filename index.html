@@ -17,6 +17,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="BuySetup.html">BS/SS</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Breakout.html">BO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="2LegMove.html">2LM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Climactic_Parabolic.html">CP</a>
+            </li>
         </ul>
     </nav>
     <div class="container">
@@ -28,39 +37,39 @@
                 <div class="col">
                     <div class="row">
                         <label class="col-8">Is the 1st or 2nd Bar of a none extended move?</label>
-                        <input class="col-4" type="checkbox" id="ignitingBar" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpIgnitingBar" name="34BP" />
                     </div>
                     <div class="row">
                         <label class="col-8">Is it a Wide Range Igniting Bar?</label>
-                        <input class="col-4" type="checkbox" id="wideRangeBar" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpWideRangeBar" name="34BP" />
                     </div>
                     <div class="row">
                         <label class="col-8">Is Bar #2 (or #3) an Inside Resting Bar?</label>
-                        <input class="col-4" type="checkbox" id="insideRestingBar" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpInsideRestingBar" name="34BP" />
                     </div>
                     <div class="row">
                         <label class="col-8">Has the Igniting Bar increased Volume?</label>
-                        <input class="col-4" type="checkbox" id="increasedVolume" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpIncreasedVolume" name="34BP" />
                     </div>
                     <div class="row">
                         <label class="col-8">Do the Bars have relatively equal highs?</label>
-                        <input class="col-4" type="checkbox" id="equalHighs" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpEqualHighs" name="34BP" />
                     </div>
                     <div class="row">
                         <label class="col-8">Is there a Gap prior to the Igniting Bar?</label>
-                        <input class="col-4" type="checkbox" id="gap" name="34BP" />
+                        <input class="col-4" type="checkbox" id="34bpGap" name="34BP" />
                     </div>
-                    <div>What kind of Gap is it?</div>
-                    <div id="gapLevelGroup" class="row">                    
-                        <div class="col-6"></div>
+                    <div name="gapLevelGroup">What kind of Gap is it?</div>
+                    <div id="gapLevelGroup" name="gapLevelGroup" class="form-group">                    
+                        <div class="col-4"></div>
                         <label class="col-2" for="level1">Level 1</label>
-                        <input class="col-4" type="radio" id="level1" name="gapLevel" value="level1">
-                        <div class="col-6"></div>
+                        <input class="col-2" type="radio" id="level1" name="gapLevel" value="level1" disabled="true">
+                        <div class="col-4"></div>
                         <label class="col-2" for="level2">Level 2</label>
-                        <input class="col-4" type="radio" id="level2" name="gapLevel" value="level2">
-                        <div class="col-6"></div>
+                        <input class="col-2" type="radio" id="level2" name="gapLevel" value="level2" disabled="true">
+                        <div class="col-4"></div>
                         <label class="col-2" for="level3">Level 3</label>
-                        <input class="col-4" type="radio" id="level3" name="gapLevel" value="level3">
+                        <input class="col-2" type="radio" id="level3" name="gapLevel" value="level3" disabled="true">
                     </div>
                 </div>
             </div>
@@ -68,19 +77,17 @@
             <div class="container">
                 <div>
                     <!-- Buttons -->
-                    <div class="row">
-                        <button id="resetBtn" type="reset" value="Reset" class="btn btn-primary" data-toggle="collapse" href="#resultText" role="button">Reset</button>
-                    </div>
-                    <div class="row">
-                        <button id="checkBtn" type="button" class="btn btn-primary" data-toggle="collapse" href="#resultText" role="button" aria-expanded="false" aria-controls="resultText">Check</button>
+                    <div class="form-inline">
+                        <button id="checkBtn_34BP" type="button" class="btn btn-primary"role="button" aria-expanded="false" aria-controls="resultText_34BP">Check</button>
+                        <button id="resetBtn_34BP" type="reset" value="Reset" class="btn btn-primary" role="button">Reset</button>
                     </div>
                     <!-- Result + Rating of Setup -->
-                    <div id="result">
+                    <div id="34bpResult">
                     </div>
-                    <div id="resultText"></div>
-                    <div id="rating">
+                    <div id="34bpResultText"></div>
+                    <div id="34bpRating">
                         Rating: 
-                        <div id="ratingText"></div>
+                        <div id="34bpRatingText"></div>
                     </div>
                 </div>
             </div>
@@ -91,6 +98,6 @@
   </body>
 
     <script defer> // defer makes sure, that the script is loaded after the html
-        require("./render.js");
+        require("./render_34BP.js");
     </script> 
 </html>

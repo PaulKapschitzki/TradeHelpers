@@ -12,83 +12,97 @@
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">3/4 BP</a>
+                <a class="nav-link" href="index.html">3/4 BP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="BuySetup.html">BS/SS</a>
+                <a class="nav-link" href="#">BS/SS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Breakout.html">BO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="2LegMove.html">2LM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Climactic_Parabolic.html">CP</a>
             </li>
         </ul>
     </nav>
-    <form id="form_34BP">
-        <h2>BS / SS</h2>
-
-        <!-- Checklist -->
-        <div class="container">
-            <div class="col">
-                <div class="row">
-                    <label class="col-8">Is the 1st or 2nd Bar of a none extended move?</label>
-                    <input class="col-4" type="checkbox" id="ignitingBar" name="34BP" />
-                </div>
-                <div class="row">
-                    <label class="col-8">Is it a Wide Range Igniting Bar?</label>
-                    <input class="col-4" type="checkbox" id="wideRangeBar" name="34BP" />
-                </div>
-                <div class="row">
-                    <label class="col-8">Is Bar #2 (or #3) an Inside Resting Bar?</label>
-                    <input class="col-4" type="checkbox" id="insideRestingBar" name="34BP" />
-                </div>
-                <div class="row">
-                    <label class="col-8">Has the Igniting Bar increased Volume?</label>
-                    <input class="col-4" type="checkbox" id="increasedVolume" name="34BP" />
-                </div>
-                <div class="row">
-                    <label class="col-8">Do the Bars have relatively equal highs?</label>
-                    <input class="col-4" type="checkbox" id="equalHighs" name="34BP" />
-                </div>
-                <div class="row">
-                    <label class="col-8">Is there a Gap prior to the Igniting Bar?</label>
-                    <input class="col-4" type="checkbox" id="gap" name="34BP" />
-                </div>
-                
-                <div id="gapLevelGroup" class="row">
-                    <div>What kind of Gap is it?</div>
-                    <div class="col-6"></div>
-                    <label class="col-2" for="level1">Level 1</label>
-                    <input class="col-4" type="radio" id="level1" name="gapLevel" value="level1">
-                    <div class="col-6"></div>
-                    <label class="col-2" for="level2">Level 2</label>
-                    <input class="col-4" type="radio" id="level2" name="gapLevel" value="level2">
-                    <div class="col-6"></div>
-                    <label class="col-2" for="level3">Level 3</label>
-                    <input class="col-4" type="radio" id="level3" name="gapLevel" value="level3">
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div>
-                <!-- Buttons -->
-                <div class="row">
-                    <button id="resetBtn" type="reset" value="Reset" class="btn btn-primary" data-toggle="collapse" href="#resultText" role="button">Reset</button>
-                </div>
-                <div class="row">
-                    <button id="checkBtn" type="button" class="btn btn-primary" data-toggle="collapse" href="#resultText" role="button" aria-expanded="false" aria-controls="resultText">Check</button>
-                </div>
-                <!-- Result + Rating of Setup -->
-                <div id="result">
-                </div>
-                <div id="resultText"></div>
-                <div id="rating">
-                    Rating: 
-                    <div id="ratingText"></div>
+    <div class="container">
+        <form id="form_BS">
+            <h2>BS / SS</h2>
+    
+            <!-- Checklist -->
+            <div class="container">
+                <div class="col">
+                    <div class="row">
+                        <label class="col-8">Is there an uptrend (downtrend for short)?</label>
+                        <input class="col-4" type="checkbox" id="bsTrend" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does a retracement happen with at least 2 consecutive red candles?</label>
+                        <input class="col-4" type="checkbox" id="bsRetracement" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price retrace to 21 EMA (or 200 SMA)?</label>
+                        <input class="col-4" type="checkbox" id="bsRetracementEMA" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price make a 50% retracement of prior move?</label>
+                        <input class="col-4" type="checkbox" id="bsRetracement50perCent" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price retrace prior Pivot or Support/Resistance level?</label>
+                        <input class="col-4" type="checkbox" id="bsRetracementPivot" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price indicate a reversal with indecision candles?</label>
+                        <input class="col-4" type="checkbox" id="bsIndecisionCandles" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price indicate a reversal with a Retest & Failure?</label>
+                        <input class="col-4" type="checkbox" id="bsRetestAndFailure" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price indicate a reversal with Ending Volume</label>
+                        <input class="col-4" type="checkbox" id="bsEndingVolume" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does price indicate a reversal with Bottoming Tails?</label>
+                        <input class="col-4" type="checkbox" id="bsBottomingTails" name="BS" />
+                    </div>
+                    <div class="row">
+                        <label class="col-8">Does the top (bottom) of prior Pivot form a clear V-Shape?</label>
+                        <input class="col-4" type="checkbox" id="bsVShapePivot" name="BS" />
+                    </div>
                 </div>
             </div>
-        </div>
-        
-    </form>
+    
+            <div class="container">
+                <div>
+                    <!-- Buttons -->
+                    <div class="row">
+                        <button id="resetBtn_BS" type="reset" value="Reset" class="btn btn-primary" role="button">Reset</button>
+                    </div>
+                    <div class="row">
+                        <button id="checkBtn_BS" type="button" class="btn btn-primary" role="button" aria-expanded="false" aria-controls="resultText_BS">Check</button>
+                    </div>
+                    <!-- Result + Rating of Setup -->
+                    <div id="bsResult">
+                    </div>
+                    <div id="bsResultText"></div>
+                    <div id="bsRating">
+                        Rating: 
+                        <div id="bsRatingText"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
   </body>
 
     <script defer> // defer makes sure, that the script is loaded after the html
-        require("./render.js");
+        require("./render_BS.js");
     </script> 
 </html>
