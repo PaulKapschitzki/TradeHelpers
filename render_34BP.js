@@ -113,14 +113,25 @@ window.onload = function(){
     /**
      * @description Enables or disables gap level HTML elements according to value of a the "isGap" checkbox
      */
-    chkBxIsGap_34BP.onchange = () => {
-        const gapLevelGroup = document.getElementsByName("gapLevelGroup");
-        for (let i = 0; i < gapLevelGroup.length; i++) {
-            if (chkBxIsGap_34BP.checked === true) {
-                gapLevelGroup[i].disabled = false;
-            } else {
-                gapLevelGroup[i].disabled = true;
-            }
+    chkBxIsGap_34BP.onclick = () => {
+        let level1 = document.getElementById("level1");
+        let level2 = document.getElementById("level2");
+        let level3 = document.getElementById("level3");
+        
+        if (chkBxIsGap_34BP.checked == true) {
+            // enable radio buttons
+            level1.disabled = false;
+            level2.disabled = false;
+            level3.disabled = false;
+        } else {
+            // clear selection
+            level1.checked = false;
+            level2.checked = false;
+            level3.checked = false;
+            // disable radio buttons
+            level1.disabled = true;
+            level2.disabled = true;
+            level3.disabled = true;
         }
     }
 
