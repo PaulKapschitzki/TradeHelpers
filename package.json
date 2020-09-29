@@ -7,6 +7,7 @@
     "postinstall": "install-app-deps",
     "start": "electron .",
     "dist": "electron-builder",
+    "pack": "electron-builder --dir",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,20 +21,17 @@
   },
   "homepage": "https://github.com/PaulKapschitzki/TradeHelpers#readme",
   "devDependencies": {
-    "electron": "^10.1.1",
-    "electron-builder": "^22.8.1"
-  },
-  "dependencies": {
+    "electron": "^10.1.2",
+    "electron-builder": "^22.8.1",
     "nodemon": "^2.0.4"
   },
-  "build": {
+  "electron-builder": {
     "appId": "com.electron.app",
+    "directories": {
+      "output": "build"
+    },
     "win": {
       "target": "portable"
-    },
-    "portable": {
-      "unicode": false,
-      "artifactName": "my_electron_app.exe"
     }
   }
 }
