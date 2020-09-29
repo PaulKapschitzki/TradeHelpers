@@ -28,10 +28,15 @@
   "electron-builder": {
     "appId": "com.electron.app",
     "directories": {
-      "output": "build"
+      "output": "electron/output",
+      "app": "electron/app",
+      "buildResources": "electron/buildResources"
     },
     "win": {
       "target": "portable"
+    },
+    "portable": {
+        "artifactName": "TradeHelpers_Portable.exe"
     }
   }
 }
