@@ -1,7 +1,3 @@
 .navbar-nav {
     flex-direction: row;
 }
-
-.navbar-nav li {
-    margin: 10px;
-}
