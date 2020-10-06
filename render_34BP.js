@@ -23,35 +23,35 @@ window.onload = function(){
         if( testCheckbox(document.getElementById("34bpIgnitingBar")) ) {
             rating_34BP += 25;
         } else {
-            rating_34BP -= 25;
+            rating_34BP -= 0;
         }
 
         // WideRangeBar = WRB
         if( testCheckbox(document.getElementById("34bpWideRangeBar")) ) {
             rating_34BP += 20;
         } else {
-            rating_34BP -= 20;
+            rating_34BP -= 0;
         }
 
         // InsideRestingBar = IRB
         if( testCheckbox(document.getElementById("34bpInsideRestingBar")) ) {
             rating_34BP += 20;
         } else {
-            rating_34BP -= 20;
+            rating_34BP -= 0;
         }
 
         // Equal Highs
         if( testCheckbox(document.getElementById("34bpEqualHighs")) ) {
             rating_34BP += 10;
         } else {
-            rating_34BP -= 10;
+            rating_34BP -= 0;
         }
 
         // Increased Volume
         if( testCheckbox(document.getElementById("34bpIncreasedVolume")) ) {
             rating_34BP += 15;
         } else {
-            rating_34BP -= 15;
+            rating_34BP -= 0;
         }
 
         // Gap level
@@ -76,12 +76,14 @@ window.onload = function(){
             formResult = "Bad Trade!";
         } else if ( rating_34BP > 70 && rating_34BP <= 90 ) {
             formResult = "Good Trade!";
-        } else if ( rating_34BP > 90 ) {
+        } else if ( rating_34BP > 90 && rating_34BP <= 100 ) {
             formResult = "Great Trade!";
+        } else if ( rating_34BP > 100 ) {
+            formResult = "Awesome Trade! I would take it!";
         } else {
             formResult = "ERROR: No result available!";
         }
-
+        console.log("rating = " + rating_34BP);
         // Displaying Results
         resultText_34BP.innerHTML = formResult;
         ratingText_34BP.innerHTML = rating_34BP;
