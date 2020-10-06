@@ -54,13 +54,6 @@ window.onload = function(){
             rating_34BP -= 15;
         }
 
-        // Gap?
-        if( testCheckbox(document.getElementById("34bpGap")) ) {
-            rating_34BP += 10;
-        } else {
-            rating_34BP -= 10;
-        }
-
         // Gap level
         let gapLevel = document.getElementsByName("gapLevel");
         let gapType = "";
