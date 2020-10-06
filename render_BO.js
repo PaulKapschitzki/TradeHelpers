@@ -19,37 +19,37 @@ window.onload = function(){
      * @description Checks the results BuySetup/SellSetup checklist
      */
     const checkBOTrade = () => {
-        // In an uptrend?
+        // Consolidation before setup with at least 5 Bars?
         if( testCheckbox(document.getElementById("boConsolidation")) ) {
-            rating_BO += 20;
+            rating_BO += 25;
         } else {
             rating_BO -= 0;
         }
 
-        // Does setup appear after a retracement?
+        // Relatively low volume during consolidation?
         if( testCheckbox(document.getElementById("boConsolLowVol")) ) {
             rating_BO += 20;
         } else {
             rating_BO -= 0;
         }
 
-        // Retracement to Moving Average?
+        // Relative Strength?
         if( testCheckbox(document.getElementById("boRS")) ) {
             rating_BO += 5;
         } else {
             rating_BO -= 0;
         }
 
-        // 50% Retracement?
+        // 21 EMA retracement?
         if( testCheckbox(document.getElementById("bo21EmaRetracement")) ) {
             rating_BO += 10;
         } else {
             rating_BO -= 0;
         }
 
-        // Retracement to prior Pivot or Support / Resistance?
+        // Clean and Tight base?
         if( testCheckbox(document.getElementById("boCleanAndTightBase")) ) {
-            rating_BO += 10;
+            rating_BO += 15;
         } else {
             rating_BO -= 0;
         }
@@ -63,7 +63,7 @@ window.onload = function(){
             if(roundNumbers[i].checked)
             {
                 numberType = roundNumbers[i].value;
-                if (numberType === "VBRN") rating_BO += 20;
+                if (numberType === "VBRN") rating_BO += 15;
                 if (numberType === "BRN") rating_BO += 10;
                 if (numberType === "HRN") rating_BO += 5;
             }
@@ -71,7 +71,7 @@ window.onload = function(){
 
         // Retest & Failure?
         if( testCheckbox(document.getElementById("boTrendlineBreak")) ) {
-            rating_BO += 10;
+            rating_BO += 5;
         } else {
             rating_BO -= 0;
         }
@@ -88,10 +88,12 @@ window.onload = function(){
 
         if ( rating_BO <= 70 ) {
             formResult = "Bad Trade!";
-        } else if ( rating_BO > 70 && rating_BO <= 90 ) {
+        } else if ( rating_BO > 70 && rating_BO <= 85 ) {
             formResult = "Good Trade!";
-        } else if ( rating_BO > 90 ) {
+        } else if ( rating_BO > 85 && rating_BO < 100 ) {
             formResult = "Great Trade!";
+        } else if ( rating_BO >= 100 ) {
+            formResult = "Awesome Trade! I would take it!";
         } else {
             formResult = "ERROR: No result available!";
         }
