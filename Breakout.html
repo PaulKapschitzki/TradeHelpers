@@ -29,9 +29,10 @@
         </ul>
     </nav>
     <div class="container">
-        <form id="form_BO">
-            <h2>BO</h2>
-    
+        <form id="form_BO" class="form-inline">
+            <!-- Test align -->
+            <h2 class="text-center">BO</h2>
+            
             <!-- Checklist -->
             <div class="container">
                 <div class="col">
@@ -61,15 +62,18 @@
                     </div>
                     <div name="roundNumber">What kind of number is it?</div>
                     <div id="roundNumberType" name="roundNumber" class="form-group">                    
-                        <div class="col-4"></div>
-                        <label class="col-8" for="VBRN">Very Big Round Number (VBRN)</label>
-                        <input class="col-2" type="radio" id="boVBRN" name="numberType" value="VBRN" disabled>
-                        <div class="col-4"></div>
-                        <label class="col-8" for="BRN">Big Round Number (BRN)</label>
-                        <input class="col-2" type="radio" id="boBRN" name="numberType" value="BRN" disabled>
-                        <div class="col-4"></div>
-                        <label class="col-8" for="HRN">Half Round Number (HRN)</label>
-                        <input class="col-2" type="radio" id="boHRN" name="numberType" value="HRN" disabled>
+                        <div class="col-12">
+                            <label class="col-6" for="VBRN">Very Big Round Number (VBRN)</label>
+                            <input class="col-2" type="radio" id="boVBRN" name="numberType" value="VBRN" disabled>    
+                        </div>
+                        <div class="col-12">
+                            <label class="col-6" for="BRN">Big Round Number (BRN)</label>
+                            <input class="col-2" type="radio" id="boBRN" name="numberType" value="BRN" disabled>    
+                        </div>
+                        <div class="col-12">
+                            <label class="col-6" for="HRN">Half Round Number (HRN)</label>
+                            <input class="col-2" type="radio" id="boHRN" name="numberType" value="HRN" disabled>    
+                        </div>
                     </div>
                     <div class="row">
                         <label class="col-8">Did a trendline break occure previously?</label>
@@ -107,6 +111,6 @@
   </body>
 
     <script defer> // defer makes sure, that the script is loaded after the html
-        require("./render_BO.js");
+        require("./renders/render_BO.js");
     </script> 
 </html>
