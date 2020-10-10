@@ -29,49 +29,49 @@
         </ul>
     </nav>
     <div class="container">
-        <form id="form_BS">
+        <form id="form_BS" class="form-group">
             <h2 class="text-center">BS / SS</h2>
     
             <!-- Checklist -->
-            <div class="container">
+            <div>
                 <div class="col">
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Is there an uptrend (downtrend for short)?</label>
                         <input class="col-4" type="checkbox" id="bsTrend" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does a retracement happen with at least 2 consecutive red candles?</label>
                         <input class="col-4" type="checkbox" id="bsRetracement" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price retrace to 21 EMA (or 200 SMA)?</label>
                         <input class="col-4" type="checkbox" id="bsRetracementEMA" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price make a 50% retracement of prior move?</label>
                         <input class="col-4" type="checkbox" id="bsRetracement50perCent" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price retrace prior Pivot or Support/Resistance level?</label>
                         <input class="col-4" type="checkbox" id="bsRetracementPivot" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price indicate a reversal with indecision candles?</label>
                         <input class="col-4" type="checkbox" id="bsIndecisionCandles" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price indicate a reversal with a Retest & Failure?</label>
                         <input class="col-4" type="checkbox" id="bsRetestAndFailure" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price indicate a reversal with Ending Volume</label>
                         <input class="col-4" type="checkbox" id="bsEndingVolume" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does price indicate a reversal with Bottoming Tails?</label>
                         <input class="col-4" type="checkbox" id="bsBottomingTails" name="BS" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does the top (bottom) of prior Pivot form a clear V-Shape?</label>
                         <input class="col-4" type="checkbox" id="bsVShapePivot" name="BS" />
                     </div>
@@ -81,7 +81,7 @@
             <div class="container">
                 <div>
                     <!-- Buttons -->
-                    <div class="container form-inline">
+                    <div class="container form-row">
                         <div class="row">
                             <button id="checkBtn_BS" type="button" class="btn btn-primary mr-3 my-3">Check</button>
                             <button id="resetBtn_BS" type="reset" value="Reset" class="btn btn-primary my-3">Reset</button>
@@ -97,7 +97,6 @@
                     </div>
                 </div>
             </div>
-            
         </form>
     </div>
   </body>

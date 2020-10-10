@@ -29,34 +29,34 @@
         </ul>
     </nav>
     <div class="container">
-        <form id="form_BO" class="form-inline">
+        <form id="form_BO" class="form-group">
             <!-- Test align -->
             <h2 class="text-center">BO</h2>
             
             <!-- Checklist -->
-            <div class="container">
+            <div>
                 <div class="col">
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Is there a consolodiation with at least 5 candles?</label>
                         <input class="col-4" type="checkbox" id="boConsolidation" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does consolidation have (relativly) low volume?</label>
                         <input class="col-4" type="checkbox" id="boConsolLowVol" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does stock show Relativ Strength (RS)?</label>
                         <input class="col-4" type="checkbox" id="boRS" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Does pre-breakout consolidation retrace to 21 EMA?</label>
                         <input class="col-4" type="checkbox" id="bo21EmaRetracement" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Is the base <bold>CLEAN</bold>b and <bold>TIGHT</bold> in range?</label>
                         <input class="col-4" type="checkbox" id="boCleanAndTightBase" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Is it at or near a round number?</label>
                         <input class="col-4" type="checkbox" id="boNearRoundNumber" name="BO" />
                     </div>
@@ -75,11 +75,11 @@
                             <input class="col-2" type="radio" id="boHRN" name="numberType" value="HRN" disabled>    
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Did a trendline break occure previously?</label>
                         <input class="col-4" type="checkbox" id="boTrendlineBreak" name="BO" />
                     </div>
-                    <div class="row">
+                    <div class="form-row">
                         <label class="col-8">Is the pattern easily recognizable?</label>
                         <input class="col-4" type="checkbox" id="boEasy2See" name="BO" />
                     </div>
@@ -89,7 +89,7 @@
             <div class="container">
                 <div>
                     <!-- Buttons -->
-                    <div class="container form-inline">
+                    <div class="container form-row">
                         <div class="row">
                             <button id="checkBtn_BO" type="button" class="btn btn-primary mr-3 my-3">Check</button>
                             <button id="resetBtn_BO" type="reset" value="Reset" class="btn btn-primary my-3">Reset</button>
@@ -105,7 +105,6 @@
                     </div>
                 </div>
             </div>
-            
         </form>
     </div>
   </body>
