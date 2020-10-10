@@ -10,3 +10,21 @@ input {
     margin-top: 8px;
     margin-bottom: 4px;
 }
+
+img {
+    height: 70vh;
+    width: 80vw;
+    margin: 10px auto;
+}
+
+.headline_container {
+    background-color: #007BFF;
+    /* background-color: #80bdff; */
+    padding: 10px;
+    margin: 0;
+}
+
+.headline {
+    color: white;
+    /* color: #007BFF; */
+}
