@@ -101,7 +101,6 @@ window.onload = function(){
         // Displaying Results
         resultText_BO.innerHTML = formResult;
         ratingText_BO.innerHTML = rating_BO;
-        console.log("rating-BS: " + rating_BO);
     };
 
     // Check BO/BD form inputs

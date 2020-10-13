@@ -106,7 +106,6 @@ window.onload = function(){
         // Displaying Results
         resultText_BS.innerHTML = formResult;
         ratingText_BS.innerHTML = rating_BS;
-        console.log("rating-BS: " + rating_BS);
     };
 
     // Check BS/SS form inputs
