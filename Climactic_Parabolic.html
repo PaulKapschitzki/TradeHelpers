@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>>Pre-Trade-Checklist</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="index.html">3/4 BP</a>
+            </li>
+            <li class="nav-item  mx-4">
+                <a class="nav-link" href="BuySetup.html">BS/SS</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="Breakout.html">BO</a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link" href="2LegMove.html">2LM</a>
+            </li>
+            <li class="nav-item mx-4 active">
+                <a class="nav-link" href="#">CP</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid headline_container">
+        <h2 class="text-center headline">(Climactic) Parabolic - Checklist</h2>
+    </div>
+    <div class="container">
+        <form id="form_CP" class="form-group">
+            <div class="container">
+                <img src="./img/ClimacticParabolic_Example.png" alt="(Climactic) Parabolic Example" />
+            </div>
+            
+            <!-- Checklist -->
+            <div>
+                <div class="col">
+                    <div class="form-row">
+                        <label class="col-8">Are there at least 2 (preferable 4+) red super WRB?</label>
+                        <input class="col-4" type="checkbox" id="cpPriorRedBars" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Does the 'last' bar have massive Ending Volume?</label>
+                        <input class="col-4" type="checkbox" id="cpEndingVolume" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Do(es) the last bar(s) have Bottoming Tails?</label>
+                        <input class="col-4" type="checkbox" id="cpBottomingTails" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Does price break prior Support or Resistance?</label>
+                        <input class="col-4" type="checkbox" id="cpBreakingSupportOrResistance" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Do the last bars change color?</label>
+                        <input class="col-4" type="checkbox" id="cpCOCBars" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Is price far away from the 21 EMA?</label>
+                        <input class="col-4" type="checkbox" id="cpAwayFrom21EMA" name="CP" />
+                    </div>
+                    <div class="form-row">
+                        <label class="col-8">Does the Igniting Bar have big volume?</label>
+                        <input class="col-4" type="checkbox" id="cpIgnitingVolume" name="CP" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                <div>
+                    <!-- Buttons -->
+                    <div class="container form-row">
+                        <div class="row">
+                            <button id="checkBtn_CP" type="button" class="btn btn-primary mr-3 my-3">Check</button>
+                            <button id="resetBtn_CP" type="reset" value="Reset" class="btn btn-primary my-3">Reset</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Result + Rating of Setup -->
+                    <div id="cpResult">
+                    </div>
+                    <div id="cpResultText"></div>
+                    <div id="cpRating">
+                        Rating: <span id="cpRatingText"></span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  </body>
+
+    <script defer> // defer makes sure, that the script is loaded after the html
+        require("./renders/render_CP.js");
+    </script> 
+</html>
