@@ -1,6 +1,6 @@
 {
   "name": "tradehelpers",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Helper Tools for Trading",
   "main": "main.js",
   "scripts": {
@@ -28,11 +28,12 @@
   "electron-builder": {
     "appId": "com.electron.app",
     "directories": {
-      "output": "electron/output",
-      "app": "electron/app",
-      "buildResources": "electron/buildResources"
+      "output": "build/output",
+      "app": "build/app",
+      "buildResources": "build/buildResources"
     },
     "win": {
+      "icon": "./build/buildResources/gain.ico",
       "target": "portable"
     },
     "portable": {
