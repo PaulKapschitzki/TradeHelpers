@@ -1,6 +1,6 @@
 {
   "name": "tradehelpers",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Helper Tools for Trading",
   "main": "main.js",
   "scripts": {
