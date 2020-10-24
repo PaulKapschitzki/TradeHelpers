@@ -9,28 +9,16 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <nav class="navbar navbar-light bg-light form-inline">
-        <ul class="navbar-nav">
-            <li class="nav-item mx-4">
-                <a class="nav-link" href="index.html">3/4 BP</a>
-            </li>
-            <li class="nav-item mx-4">
-                <a class="nav-link" href="BuySetup.html">BS/SS</a>
-            </li>
-            <li class="nav-item mx-4">
-                <a class="nav-link" href="Breakout.html">BO</a>
-            </li>
-            <li class="nav-item mx-4">
-                <a class="nav-link" href="2LegMove.html">2LM</a>
-            </li>
-            <li class="nav-item mx-4 active">
-                <a class="nav-link" href="#">CP</a>
-            </li>
-        </ul>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link" href="index.html">3/4 BP</a>
+        <a class="nav-item nav-link" href="BuySetup.html">BS</a>
+        <a class="nav-item nav-link" href="Breakout.html">BO</a>
+        <a class="nav-item nav-link" href="2LegMove.html">2LM</a>
+        <a class="nav-item nav-link active" href="#">CP</a>
     </nav>
-    <div class="container-fluid headline_container">
+    <!-- <div class="container-fluid headline_container">
         <h2 class="text-center headline">(Climactic) Parabolic - Checklist</h2>
-    </div>
+    </div> -->
     <div class="container">
         <form id="form_CP" class="form-group">
             <div class="container">
@@ -41,32 +29,38 @@
             <div>
                 <div class="col">
                     <div class="form-row">
-                        <label class="col-8">Are there at least 2 (preferable 4+) red super WRB?</label>
-                        <input class="col-4" type="checkbox" id="cpPriorRedBars" name="CP" />
+                        <label class="col-11">Are there at least 2 (preferable 4+) red super WRB?</label>
+                        <input class="col-1" type="checkbox" id="cpPriorRedBars" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Does the 'last' bar have massive Ending Volume?</label>
-                        <input class="col-4" type="checkbox" id="cpEndingVolume" name="CP" />
+                        <label class="col-11">Does the 'last' bar have massive Ending Volume?</label>
+                        <input class="col-1" type="checkbox" id="cpEndingVolume" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Do(es) the last bar(s) have Bottoming Tails?</label>
-                        <input class="col-4" type="checkbox" id="cpBottomingTails" name="CP" />
+                        <label class="col-11">Do(es) the last bar(s) have Bottoming Tails?</label>
+                        <input class="col-1" type="checkbox" id="cpBottomingTails" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Does price break prior Support or Resistance?</label>
-                        <input class="col-4" type="checkbox" id="cpBreakingSupportOrResistance" name="CP" />
+                        <label class="col-11">Does price break prior Support or Resistance?</label>
+                        <input class="col-1" type="checkbox" id="cpBreakingSupportOrResistance" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Do the last bars change color?</label>
-                        <input class="col-4" type="checkbox" id="cpCOCBars" name="CP" />
+                        <label class="col-11">Do the last bars change color?</label>
+                        <input class="col-1" type="checkbox" id="cpCOCBars" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Is price far away from the 21 EMA?</label>
-                        <input class="col-4" type="checkbox" id="cpAwayFrom21EMA" name="CP" />
+                        <label class="col-11">Is price far away from the 21 EMA?</label>
+                        <input class="col-1" type="checkbox" id="cpAwayFrom21EMA" name="CP" />
                     </div>
+                    <hr>
                     <div class="form-row">
-                        <label class="col-8">Does the Igniting Bar have big volume?</label>
-                        <input class="col-4" type="checkbox" id="cpIgnitingVolume" name="CP" />
+                        <label class="col-11">Does the Igniting Bar have big volume?</label>
+                        <input class="col-1" type="checkbox" id="cpIgnitingVolume" name="CP" />
                     </div>
                 </div>
             </div>
