@@ -13,7 +13,7 @@ input {
 
 img {
     height: 70vh;
-    width: 80vw;
+    width: 82vw;
     margin: 10px auto;
 }
 
@@ -52,4 +52,9 @@ img {
 }
 #shareSizeCalcBtn_34BP {
     margin-left: 15px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
 }
