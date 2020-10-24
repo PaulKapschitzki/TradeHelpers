@@ -28,3 +28,28 @@ img {
     color: white;
     /* color: #007BFF; */
 }
+
+/* Stretch buttons evenly across the window */
+.btn-group {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Put margin between share size calc Button and check and reset button. Has to be put for each id, because a class wouldn't work */
+#shareSizeCalcBtn_CP {
+    margin-left: 15px;
+}
+
+#shareSizeCalcBtn_2LM {
+    margin-left: 15px;
+}
+
+#shareSizeCalcBtn_BO {
+    margin-left: 15px;
+}
+#shareSizeCalcBtn_BS {
+    margin-left: 15px;
+}
+#shareSizeCalcBtn_34BP {
+    margin-left: 15px;
+}

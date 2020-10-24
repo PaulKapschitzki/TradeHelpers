@@ -6,6 +6,9 @@ window.onload = function(){
     // Reset buttons
     const resetBtn_34BP = document.getElementById("resetBtn_34BP");
 
+    // Share Size Calc button
+    const shareSizeButton = document.getElementById("shareSizeCalcBtn_34BP");
+
     // form elements 34BP
     const resultText_34BP = document.getElementById("34bpResultText");
     const form_34BP = document.getElementById("form_34BP");
@@ -74,16 +77,19 @@ window.onload = function(){
 
         if ( rating_34BP <= 70 ) {
             formResult = "Bad Trade!";
+            shareSizeButton.hidden = true;
         } else if ( rating_34BP > 70 && rating_34BP <= 90 ) {
             formResult = "Good Trade!";
+            shareSizeButton.hidden = false;
         } else if ( rating_34BP > 90 && rating_34BP <= 100 ) {
             formResult = "Great Trade!";
+            shareSizeButton.hidden = false;
         } else if ( rating_34BP > 100 ) {
             formResult = "Awesome Trade! I would take it!";
+            shareSizeButton.hidden = false;
         } else {
             formResult = "ERROR: No result available!";
         }
-        console.log("rating = " + rating_34BP);
         // Displaying Results
         resultText_34BP.innerHTML = formResult;
         ratingText_34BP.innerHTML = rating_34BP;
@@ -103,6 +109,7 @@ window.onload = function(){
         resultText_34BP.innerHTML = "";
         ratingText_34BP.innerHTML = "";
         rating_34BP = 0;
+        shareSizeButton.hidden = true;
     }
 
     /**

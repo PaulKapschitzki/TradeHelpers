@@ -6,6 +6,9 @@ window.onload = function(){
     // Reset buttons
     const resetBtn_2LM = document.getElementById("resetBtn_2LM");
 
+    // Share Size Calc button
+    const shareSizeButton = document.getElementById("shareSizeCalcBtn_2LM");
+
     // form elements BS
     const resultText_2LM = document.getElementById("2lmResultText");
     const form_2LM = document.getElementById("form_2LM");
@@ -87,12 +90,16 @@ window.onload = function(){
 
         if ( rating_2LM <= 70 ) {
             formResult = "Bad Trade!";
+            shareSizeButton.hidden = true;
         } else if ( rating_2LM > 70 && rating_2LM <= 85 ) {
             formResult = "Good Trade!";
+            shareSizeButton.hidden = false;
         } else if ( rating_2LM > 85 && rating_2LM < 100 ) {
             formResult = "Great Trade!";
+            shareSizeButton.hidden = false;
         } else if ( rating_2LM >= 100 ) {
             formResult = "Awesome Trade! I would take it!";
+            shareSizeButton.hidden = false;
         } else {
             formResult = "ERROR: No result available!";
         }
@@ -116,6 +123,7 @@ window.onload = function(){
         resultText_2LM.innerHTML = "";
         ratingText_2LM.innerHTML = "";
         rating_2LM = 0;
+        shareSizeButton.hidden = true;
     }
 
     /**
