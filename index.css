@@ -1,27 +1,16 @@
-.navbar-nav {
-    flex-direction: row;
-}
-
 input {
     transform: scale(1.4);
 }
 
-.form-row {
+/* .form-row {
     margin-top: 8px;
     margin-bottom: 4px;
-}
+} */
 
 img {
     height: 70vh;
     width: 82vw;
-    margin: 10px auto;
-}
-
-.headline_container {
-    background-color: #007BFF;
-    /* background-color: #80bdff; */
-    padding: 10px;
-    margin: 0;
+    margin: 10px auto 30px auto;
 }
 
 .headline {
@@ -33,6 +22,7 @@ img {
 .btn-group {
     display: flex;
     flex-direction: row;
+    margin-top: 40px;
 }
 
 /* Put margin between share size calc Button and check and reset button. Has to be put for each id, because a class wouldn't work */
@@ -54,7 +44,21 @@ img {
     margin-left: 15px;
 }
 
-.form-row {
-    display: flex;
-    justify-content: space-between;
+.sscPricesInput {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.sscPrices {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.sscLabels {
+    margin-top: 10px;
+}
+
+#sscInputs {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
