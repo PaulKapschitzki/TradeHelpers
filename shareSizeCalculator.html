@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>>Pre-Trade-Checklist</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link" href="index.html">3/4 BP</a>
+        <a class="nav-item nav-link" href="BuySetup.html">BS</a>
+        <a class="nav-item nav-link" href="Breakout.html">BO</a>
+        <a class="nav-item nav-link" href="2LegMove.html">2LM</a>
+        <a class="nav-item nav-link" href="Climactic_Parabolic.html">CP</a>
+        <a class="nav-item nav-link active" href="#">ShareSizeCalculator</a>
+    </nav>
+    <div class="container">
+      <form class="form_SSC">
+        <div id="sscInputs">
+          <div class="form-group w-25 ssc">
+            <label for="EntryPrice_SSC" class="sscLabels">Entry Price</label>
+            <input type="number" step='0.01' value='0.00' class="form-control sscPricesInput" id="EntryPrice_SSC" placeholder="Entry Price">
+          </div>
+          <div class="form-group w-25">
+            <label for="StopLoss_SSC" class="sscLabels">Stop Loss</label>
+            <input type="number" step='0.01' value='0.00' class="form-control sscPricesInput" id="StopLoss_SSC" placeholder="Stop Loss">
+          </div>
+        </div>
+        <hr>
+        <div class="form-group w-25">
+          <label for="1R" class="sscLabels">1R</label>
+          <input type="number" step='0.01' value='0.00' class="form-control sscPrices" id="1R" placeholder="0.00" readonly>
+        </div>
+        <div class="form-group w-25">
+          <label for="2R" class="sscLabels">2R</label>
+          <input type="number" step='0.01' value='0.00' class="form-control sscPrices" id="2R" placeholder="0.00" readonly>
+        </div>
+        <div class="form-group w-25">
+          <label for="3R" class="sscLabels">3R</label>
+          <input type="number" step='0.01' value='0.00' class="form-control sscPrices" id="3R" placeholder="0.00" readonly>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script defer> // defer makes sure, that the script is loaded after the html
+    require("./renders/render_ShareSizeCalculator.js");
+  </script> 
+</html>
