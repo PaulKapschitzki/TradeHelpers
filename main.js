@@ -4,7 +4,7 @@ function createWindow () {
     // create browser window.
     const win = new BrowserWindow({
         width: 600,
-        height: 900,
+        height: 950,
         webPreferences: {
             nodeIntegration: true
         },
@@ -19,7 +19,7 @@ function createWindow () {
     // Open DevTools.
     // win.webContents.openDevTools()
 
-    // remove menu bar
+    // remove menu bar with false, show with true
     win.setMenuBarVisibility(false);
 }
 

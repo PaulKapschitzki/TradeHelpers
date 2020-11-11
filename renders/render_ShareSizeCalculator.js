@@ -4,6 +4,8 @@ window.onload = function() {
     const entryPrice = parseFloat(document.getElementById("EntryPrice_SSC")).toFixed(2)
     const entryPrice_SSC   = document.getElementById("EntryPrice_SSC");
     const stopLossPrice_SSC = document.getElementById("StopLoss_SSC");
+    const shareNumber_SSC = document.getElementById("shares");
+    const riskAmount_SSC = document.getElementById("riskAmount");
 
     // Targets
     let target1R_SSC = document.getElementById("1R");
@@ -31,6 +33,9 @@ window.onload = function() {
         // Get Number value out of Entry and StopLoss
         let entry = Number(entryPrice_SSC.value);
         let sl    = Number(stopLossPrice_SSC.value);
+
+        // Get number of shares depending on amount of risk and stoploss
+        shareNumber_SSC.value = calcShareSize(entry, sl);
 
         // If direction is "long" add target to entry price, if "short" substract target from entry price, else no valid input
         if (direction === "long") {
@@ -69,6 +74,9 @@ window.onload = function() {
         let entry = Number(entryPrice_SSC.value);
         let sl    = Number(stopLossPrice_SSC.value);
 
+        // Get number of shares depending on amount of risk and stoploss
+        shareNumber_SSC.value = calcShareSize(entry, sl);
+
         // If direction is "long" add target to entry price, if "short" substract target from entry price, else no valid input
         if (direction === "long") {
             target1R_SSC.value = parseFloat(entry + ( entry - sl )).toFixed(2);
@@ -83,5 +91,25 @@ window.onload = function() {
             target2R_SSC.value = 0.00;
             target3R_SSC.value = 0.00;
         }
+    }
+
+    /**
+     * 
+     * @description Calculates the necessary share Size
+     * @param {number} entry 
+     * @param {number} stoploss 
+     */
+    const calcShareSize = (entry, stoploss) => {
+        console.log("riskAmount = " + riskAmount_SSC.value + " of type : " + riskAmount_SSC.value)
+        let result = 0;
+        if (entry > stoploss) {
+            console.log("result if = " + (riskAmount_SSC.value / ( entry - stoploss )) );
+            result = Number(riskAmount_SSC.value) / ( entry - stoploss );
+        } else {
+            console.log("result else = " + riskAmount_SSC.value / ( stoploss - entry ) );
+            result = Number(riskAmount_SSC.value) / ( stoploss - entry );
+        }
+        console.log("result = " + result + " of type : " + typeof(result));
+        return result;
     }
 }
