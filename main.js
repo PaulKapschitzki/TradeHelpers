@@ -6,8 +6,8 @@ const store = new Store({
     // We'll call our data file 'user-preferences'
     configName: 'user-preferences_tradeHelpers',
     defaults: {
-      // 800x600 is the default size of our window
-      windowBounds: { width: 600, height: 950 }
+        // 800x600 is the default size of our window
+        windowBounds: { width: 600, height: 950 }
     }
 });
 
@@ -20,9 +20,10 @@ function createWindow () {
         width: width,
         height: height,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true // needs to be added for electron Version 10 or later
         },
-        resizable: false
+        resizable: true
     })
 
     // The BrowserWindow class extends the node.js core EventEmitter class, so we use that API

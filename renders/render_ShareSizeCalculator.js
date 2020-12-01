@@ -1,17 +1,32 @@
 "use strict";
+const Store = require('../store');
+// const { app } = require('electron');
+
+// First instantiate the class
+const store = new Store({
+    // We'll call our data file 'user-preferences'
+    configName: 'user-preferences_tradeHelpers',
+    defaults: {
+      // 10$ is the default amount of risk
+      riskAmount: 10.00
+    }
+});
+
 window.onload = function() {
     // Inputs
-    const entryPrice = parseFloat(document.getElementById("EntryPrice_SSC")).toFixed(2)
+    // const entryPrice = parseFloat(document.getElementById("EntryPrice_SSC")).toFixed(2)
     const entryPrice_SSC   = document.getElementById("EntryPrice_SSC");
     const stopLossPrice_SSC = document.getElementById("StopLoss_SSC");
     const shareNumber_SSC = document.getElementById("shares");
-    const riskAmount_SSC = document.getElementById("riskAmount");
+
+    // Get risk amount from store and set the value of input tag in html shareSizeCalculatr.html
+    let riskAmount_SSC = store.get("riskAmount");
+    document.getElementById("riskAmount").value = riskAmount_SSC;
 
     // Targets
     let target1R_SSC = document.getElementById("1R");
     let target2R_SSC = document.getElementById("2R");
     let target3R_SSC = document.getElementById("3R");
-
 
     /**
      * 
@@ -98,6 +113,7 @@ window.onload = function() {
      * @description Calculates the necessary share Size
      * @param {number} entry 
      * @param {number} stoploss 
+     * 
      */
     const calcShareSize = (entry, stoploss) => {
         console.log("riskAmount = " + riskAmount_SSC.value + " of type : " + riskAmount_SSC.value)
@@ -111,5 +127,17 @@ window.onload = function() {
         }
         console.log("result = " + result + " of type : " + typeof(result));
         return result;
+    }
+
+    /**
+     * 
+     * @description Save user defined amount of risk in userData (user-perferences_tradeHelpers.json)
+     * 
+     */
+    document.getElementById("riskAmount").onchange = () => {
+        let riskAmount_SSC = Number(document.getElementById("riskAmount").value);
+
+        // Now that we have them, save them using the `set` method.
+        store.set('riskAmount', riskAmount_SSC );
     }
 }
