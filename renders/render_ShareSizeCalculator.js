@@ -120,8 +120,7 @@ window.onload = function() {
      * 
      */
     const calcShareSize = (entry, stoploss) => {
-        // console.log("riskAmount = " + riskAmount_SSC.value + " of type : " + riskAmount_SSC.value);
-        console.log("riskAmount = " + riskAmount_SSC + " of type : " + typeof(riskAmount_SSC) );
+        // console.log("riskAmount = " + riskAmount_SSC + " of type : " + typeof(riskAmount_SSC) );
         let result = 0;
         if (entry > stoploss) {
             console.log("result if = " + (riskAmount_SSC / ( entry - stoploss )) );
