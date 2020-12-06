@@ -124,10 +124,10 @@ window.onload = function() {
         let result = 0;
         if (entry > stoploss) {
             console.log("result if = " + (riskAmount_SSC / ( entry - stoploss )) );
-            result = Number(riskAmount_SSC) / ( entry - stoploss );
+            result = parseFloat(Number(riskAmount_SSC) / ( entry - stoploss )).toFixed(2);
         } else {
             console.log("result else = " + riskAmount_SSC / ( stoploss - entry ) );
-            result = Number(riskAmount_SSC) / ( stoploss - entry );
+            result = parseFloat(Number(riskAmount_SSC) / ( stoploss - entry )).toFixed(2);
         }
         console.log("result = " + result + " of type : " + typeof(result));
         return result;
