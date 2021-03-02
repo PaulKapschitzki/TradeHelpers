@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>>Pre-Trade-Checklist</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link active" href="#">MT</a>
+        <a class="nav-item nav-link" href="index.html">3/4 BP</a>
+        <a class="nav-item nav-link" href="BuySetup.html">BS</a>
+        <a class="nav-item nav-link" href="Breakout.html">BO</a>
+        <a class="nav-item nav-link" href="2LegMove.html">2LM</a>
+        <a class="nav-item nav-link" href="Climactic_Parabolic">CP</a>
+    </nav>
+    <!-- <div class="container-fluid headline_container">
+        <h2 class="text-center headline">(Climactic) Parabolic - Checklist</h2>
+    </div> -->
+    <div class="container">
+        <form id="form_MT" class="form-group">
+            <div class="container">
+                <img src="./img/Markttechnik_Example.png" alt="Markttechnik" />
+            </div>
+            
+            <!-- Checklist -->
+            <div>
+                <div class="col">
+                    <div class="form-row">
+                        <label class="col-11">Gibt es einen deutlichen Trend mit steigenden Hochs und Tiefs?</label>
+                        <input class="col-1" type="checkbox" id="mtTrend" name="MT" />
+                    </div>
+                    <hr>
+                    <div class="form-row">
+                        <label class="col-11">Liegt der Kurs unter einem wichtigen Resistance Level?</label>
+                        <input class="col-1" type="checkbox" id="mtResistance" name="MT" />
+                    </div>
+                    <hr>
+                    <div class="form-row">
+                        <label class="col-11">Befindet sich die Aktie in einem aktuell gefragten Sektor nach Branchenrotation?</label>
+                        <input class="col-1" type="checkbox" id="mtHotSector" name="MT" />
+                    </div>
+                    <hr>
+                    <div class="form-row">
+                        <label class="col-11">Hat die Aktie Relative Strength (Long)?</label>
+                        <input class="col-1" type="checkbox" id="mtRelativeStrengthWeakness" name="MT" />
+                    </div>
+                    <hr>
+                    <div class="form-row">
+                        <label class="col-11">Gibt es ein 1-2-3 Setup mit Ross-Haken auf einer tieferen Zeitebene?</label>
+                        <input class="col-1" type="checkbox" id="mt123Setup" name="MT" />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                <!-- Buttons -->
+                <div class="form-row form-group btn-group">
+                    <button id="checkBtn_MT" type="button" class="btn btn-primary mr-3 mb-3" role="button" >Check</button>
+                    <button id="resetBtn_MT" type="reset" value="Reset" class="btn btn-primary mb-3" role="button" >Reset</button>
+                    <a href="shareSizeCalculator.html" id="shareSizeCalcBtn_MT" type="button" class="btn btn-success mr-3 mb-3 btn-shareSizeCalc" role="button" aria-pressed="true" hidden>Calculator Your Share Size</a>
+                </div>
+                <!-- Result + Rating of Setup -->
+                <div id="mtResult">
+                </div>
+                <div id="mtRating">
+                    <b>Rating: <span id="mtRatingText"></span></b>
+                    <b><span> - </span></b>
+                    <b><span id="mtResultText"></span></b>
+                </div>
+            </div>
+        </form>
+    </div>
+  </body>
+
+    <script defer> // defer makes sure, that the script is loaded after the html
+        require("./renders/render_MT.js");
+    </script> 
+</html>
