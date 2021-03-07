@@ -1,6 +1,6 @@
 {
   "name": "tradehelpers",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Helper Tools for Trading",
   "main": "main.js",
   "scripts": {
@@ -33,7 +33,7 @@
       "buildResources": "build/buildResources"
     },
     "win": {
-      "icon": "./build/buildResources/gain.ico",
+      "icon": "./build/gain.ico",
       "target": "portable"
     },
     "portable": {

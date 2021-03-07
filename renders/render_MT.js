@@ -23,37 +23,51 @@ window.onload = function(){
      */
     const checkMTTrade = () => {
         debugger;
-        // At least 2+ SUPER Wide Range Bars (SWRB's)?
+        // Is the stock in an obvious trend with higher highs and lower lows?
         if( testCheckbox(document.getElementById("mtTrend")) ) {
             rating_MT += 25;
         } else {
             rating_MT -= 0;
         }
 
-        // Does the 'last' bar have massive Ending Volume?
+        // Does price reside under strong resistance?
         if( testCheckbox(document.getElementById("mtResistance")) ) {
             rating_MT += 20;
         } else {
             rating_MT -= 0;
         }
 
-        // Do(es) the last bar(s) have Bottoming Tails?
+        // Is the stock part of a "hot" sector? Does the sector perform well at the time?
         if( testCheckbox(document.getElementById("mtHotSector")) ) {
             rating_MT += 20;
         } else {
             rating_MT -= 0;
         }
 
-        // Does price break prior Support or Resistance?
+        // Does price have Relative Strength or Weakness?
         if( testCheckbox(document.getElementById("mtRelativeStrengthWeakness")) ) {
             rating_MT += 20;
         } else {
             rating_MT -= 0;
         }
 
-        // Does price break prior Support or Resistance?
+        // Does price show a 1-2-3 Setup on a lower timeframe?
         if( testCheckbox(document.getElementById("mt123Setup")) ) {
             rating_MT += 15;
+        } else {
+            rating_MT -= 0;
+        }
+
+        // Do corrections happen in form of consolidations?
+        if( testCheckbox(document.getElementById("mtCorrectionAsConsolidation")) ) {
+            rating_MT += 10;
+        } else {
+            rating_MT -= 0;
+        }
+
+        // Is price over 200 and 50 EMA?
+        if( testCheckbox(document.getElementById("mtOver50And200EMA")) ) {
+            rating_MT += 10;
         } else {
             rating_MT -= 0;
         }
